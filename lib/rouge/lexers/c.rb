@@ -90,7 +90,7 @@ module Rouge
 
       state :whitespace do
         rule /\n+/m, Text, :bol
-        rule %r(//(\\.|.)*?\n), Comment::Single, :bol
+        rule %r(//(\\.|.)*?$), Comment::Single, :bol
         mixin :inline_whitespace
       end
 
